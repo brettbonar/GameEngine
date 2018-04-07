@@ -22,10 +22,10 @@ hr {
   white-space: nowrap;
   /* text-shadow: 4px 4px 0 rgba(140, 117, 117, 0.7); */
   text-shadow:
-  -1px -1px 0 magenta,
-  1px -1px 0 magenta,
-  -1px 1px 0 magenta,
-  1px 1px 0 magenta;
+  -1px -1px 0 2fca56,
+  1px -1px 0 2fca56,
+  -1px 1px 0 2fca56,
+  1px 1px 0 2fca56;
   color: white;
 }
 
@@ -68,18 +68,10 @@ hr {
   width: 100vmax;
   height: 100vmax; */
 
-  width: 100vw; 
-  /* height: 100vw; */
-  /* height:width ratio = 9/16 = .5625 */
-  height: 56.25vw; 
-  /* 12/16 */
-  /* height: 75vw; */
-  max-height: 100vh;
-  /* max-width: 100vh; */
-  /* 16/9 = 1.778 */
-  max-width: 177.78vh;  
-  /* 16/12 */
-  /* max-width: 133.33vh; */ 
+  width: 100vmin; 
+  height: 100vmin;
+  max-height: 100vmin;
+  max-width: 100vmin;
   margin: auto;
   position: absolute;
   top:0;bottom:0; /* vertical center */
@@ -104,8 +96,11 @@ hr {
   z-index: -999;
 }
 
-.menu {
+.main-menu {
   background-color: black;
+}
+
+.menu {
   z-index: 9999;
   position: absolute;
   left: 0;
@@ -123,6 +118,10 @@ hr {
   display: flex;
   flex-direction: column;
   font-size: 2vw;
+}
+
+table {
+  font-size: 32px;
 }
 
 .menu .controls {
@@ -175,13 +174,13 @@ hr {
   margin: 10px;
   /* Button style */
   border: 1px solid #ffffff;
-  background: #ca2fa3;
-  background: -webkit-gradient(linear, left top, left bottom, from(#cc28a3), to(#ca2fa3));
-  background: -webkit-linear-gradient(top, #cc28a3, #ca2fa3);
-  background: -moz-linear-gradient(top, #cc28a3, #ca2fa3);
-  background: -ms-linear-gradient(top, #cc28a3, #ca2fa3);
-  background: -o-linear-gradient(top, #cc28a3, #ca2fa3);
-  background-image: -ms-linear-gradient(top, #cc28a3 0%, #ca2fa3 100%);
+  background: #2fca56;
+  background: -webkit-gradient(linear, left top, left bottom, from(#24ca4d), to(#2fca56));
+  background: -webkit-linear-gradient(top, #24ca4d, #2fca56);
+  background: -moz-linear-gradient(top, #24ca4d, #2fca56);
+  background: -ms-linear-gradient(top, #24ca4d, #2fca56);
+  background: -o-linear-gradient(top, #24ca4d, #2fca56);
+  background-image: -ms-linear-gradient(top, #24ca4d 0%, #2fca56 100%);
   padding: 13.5px 27px;
   -webkit-border-radius: 1px;
   -moz-border-radius: 1px;
@@ -198,25 +197,25 @@ hr {
 .control:hover {
   border: 1px solid #ffffff;
   text-shadow: #571e1e 0 1px 0;
-  background: #cc64b2;
-  background: -webkit-gradient(linear, left top, left bottom, from(#cc64b2), to(#c968b0));
-  background: -webkit-linear-gradient(top, #cc64b2, #c968b0);
-  background: -moz-linear-gradient(top, #cc64b2, #c968b0);
-  background: -ms-linear-gradient(top, #cc64b2, #c968b0);
-  background: -o-linear-gradient(top, #cc64b2, #c968b0);
-  background-image: -ms-linear-gradient(top, #cc64b2 0%, #c968b0 100%);
+  background: #64cc87;
+  background: -webkit-gradient(linear, left top, left bottom, from(#64cc87), to(#6bce8c));
+  background: -webkit-linear-gradient(top, #64cc87, #6bce8c);
+  background: -moz-linear-gradient(top, #64cc87, #6bce8c);
+  background: -ms-linear-gradient(top, #64cc87, #6bce8c);
+  background: -o-linear-gradient(top, #64cc87, #6bce8c);
+  background-image: -ms-linear-gradient(top, #64cc87 0%, #6bce8c 100%);
   color: #fff;
   }
 .control:active {
   text-shadow: #571e1e 0 1px 0;
   border: 1px solid #ffffff;
-  background: #cc28a3;
-  background: -webkit-gradient(linear, left top, left bottom, from(#ca2fa3), to(#ca2fa3));
-  background: -webkit-linear-gradient(top, #ca2fa3, #cc28a3);
-  background: -moz-linear-gradient(top, #ca2fa3, #cc28a3);
-  background: -ms-linear-gradient(top, #ca2fa3, #cc28a3);
-  background: -o-linear-gradient(top, #ca2fa3, #cc28a3);
-  background-image: -ms-linear-gradient(top, #ca2fa3 0%, #cc28a3 100%);
+  background: #24ca4d;
+  background: -webkit-gradient(linear, left top, left bottom, from(#2fca56), to(#2fca56));
+  background: -webkit-linear-gradient(top, #2fca56, #24ca4d);
+  background: -moz-linear-gradient(top, #2fca56, #24ca4d);
+  background: -ms-linear-gradient(top, #2fca56, #24ca4d);
+  background: -o-linear-gradient(top, #2fca56, #24ca4d);
+  background-image: -ms-linear-gradient(top, #2fca56 0%, #24ca4d 100%);
   color: #fff;
   }
 

@@ -90,6 +90,7 @@ class GameController {
   }
 
   start() {
+    this.done = false;
     this.previousTime = performance.now();
     this.menus.hideAll();
     this.game.start();
@@ -97,28 +98,30 @@ class GameController {
   }
 
   gameLoop(currentTime) {
-    let elapsedTime = currentTime - this.previousTime;
-    this.previousTime = currentTime;
-  
-    this.game.processInput(elapsedTime);
-    this.menus.processInput(elapsedTime);
-
-    this.game.update(elapsedTime);
-    this.menus.update(elapsedTime);
-
-    this.game.render(elapsedTime);
-    this.menus.render(elapsedTime);
+    if (!this.done) {
+      let elapsedTime = currentTime - this.previousTime;
+      this.previousTime = currentTime;
     
-    // Count FPS
-    this.fpsTime += elapsedTime;
-    this.frames += 1;
-    while (this.fpsTime >= 1000) {
-      this.fps = this.frames;
-      this.fpsTime -= 1000;
-      this.frames = 0;
+      this.game.processInput(elapsedTime);
+      this.menus.processInput(elapsedTime);
+
+      this.game.update(elapsedTime);
+      this.menus.update(elapsedTime);
+
+      this.game.render(elapsedTime);
+      this.menus.render(elapsedTime);
+      
+      // Count FPS
+      this.fpsTime += elapsedTime;
+      this.frames += 1;
+      while (this.fpsTime >= 1000) {
+        this.fps = this.frames;
+        this.fpsTime -= 1000;
+        this.frames = 0;
+      }
+    
+      requestAnimationFrame((currentTime) => this.gameLoop(currentTime));
     }
-  
-    requestAnimationFrame((currentTime) => this.gameLoop(currentTime));
   }
 }
 

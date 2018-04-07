@@ -6,29 +6,8 @@ import { SURFACE_TYPE, MOVEMENT_TYPE } from "../../Engine/Physics/PhysicsConstan
 
 let objectId = 1;
 
-class GameObjectProxy {
+export default class GameObject {
   constructor(params) {
-    if (!params.static) {
-      return new Proxy(this, {
-        set: (object, key, value) => {
-          if (object[key] !== value) {
-            object[key] = value;
-            object._modified = true;
-            if (key === "position" && this.dimensions) {
-              this.updatePosition();
-            }
-          }
-          return true;
-        }
-      });
-    }
-    // else do nothing
-  }
-}
-
-export default class GameObject extends GameObjectProxy {
-  constructor(params) {
-    super(params);
     _.merge(this, params);
     _.defaults(this, {
       boundsType: Bounds.TYPE.RECTANGLE,

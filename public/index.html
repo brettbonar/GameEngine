@@ -12,13 +12,13 @@
   </script>
   <script src="extern/lodash/lodash.js"></script>
   <script src="extern/jquery/dist/jquery.min.js"></script>
-  <script src="/modules/GameDemo/GameDemoController.mjs" type="module"></script>
+  <script src="/modules/Snake/SnakeController.mjs" type="module"></script>
 </head>
 
 <body>
-  <div game-controller="GameDemoController" template="Menu/menus.html">
+  <div game-controller="SnakeController" template="Menu/menus.html">
     <div id="canvas-group" class="canvas-group">
-      <canvas class="game-canvas primary-canvas" id="canvas-main" width="1600" height="900"></canvas>
+      <canvas class="game-canvas primary-canvas" id="canvas-main" width="1000" height="1000"></canvas>
     </div>
   </div>
 </body>
