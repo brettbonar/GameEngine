@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+  <meta charset="UTF-8">
+  <title>GameEngineDemo</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="/modules/Engine/gameUI.css">
+  <script>
+    var Game = {};
+    var Graphics = {};
+  </script>
+  <script src="extern/lodash/lodash.js"></script>
+  <script src="extern/jquery/dist/jquery.min.js"></script>
+  <script src="/modules/GameDemo/GameDemoController.mjs" type="module"></script>
+</head>
+
+<body>
+  <div game-controller="GameDemoController" template="Menu/menus.html">
+    <div id="canvas-group" class="canvas-group">
+      <canvas class="game-canvas primary-canvas" id="canvas-main" width="1600" height="900"></canvas>
+    </div>
+  </div>
+</body>
+</html>

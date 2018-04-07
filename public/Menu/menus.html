@@ -1,0 +1,33 @@
+<gui-menu class="menu" gui-start id="MAIN" gui-on-show="returnToMain()">
+  <h1 class="title">Game Demo</h1>
+  <div class="sub-menu controls">
+    <button class="control" gui-click="newGame()">New Game</button>
+    <button class="control" gui-click="menus.transition('HIGH_SCORES')">High Scores</button>
+    <button class="control" gui-click="menus.transition('CREDITS')">Credits</button>
+  </div>
+</gui-menu>
+
+<gui-menu class="menu" id="HIGH_SCORES" gui-on-show="menus.showScores(getHighScores())">
+  <h1 class="title">Battle Royale</h1>
+  <div class="sub-menu">
+    <table class="list-table" id="high-scores-list">
+      <tr>
+        <th>A</th>
+        <th>B</th>
+        <th>C</th>
+      </tr>
+    </table>
+    <hr />
+    <button class="control" gui-click="menus.transition('MAIN')">Back</button>
+    <button class="control float-right" gui-click="clearScores()">Clear Scores</button>
+  </div>
+</gui-menu>
+
+<gui-menu class="menu" id="CREDITS">
+  <h1 class="title">Battle Royale</h1>
+  <div class="sub-menu credits">
+    <div>Created by Brett Bonar for CS5460 taught by Dean Mathias</div>
+    <hr />
+    <button class="control" gui-click="menus.transition('MAIN')">Back</button>
+  </div>
+</gui-menu>

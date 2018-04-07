@@ -1,0 +1,233 @@
+body {
+  font-family: "Trebuchet MS";
+  color: white;
+}
+
+hr {
+  width: 100%;
+}
+
+.form-input {
+  height: 30px;
+}
+
+.bottom-menu {
+  margin-right: 20px;
+}
+
+.title {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 7vw;
+  white-space: nowrap;
+  /* text-shadow: 4px 4px 0 rgba(140, 117, 117, 0.7); */
+  text-shadow:
+  -1px -1px 0 magenta,
+  1px -1px 0 magenta,
+  -1px 1px 0 magenta,
+  1px 1px 0 magenta;
+  color: white;
+}
+
+.float-right {
+  float: right;
+}
+
+.game-canvas.map-canvas {
+  /* display: none; */
+  z-index: -2;
+}
+.map-save-canvas {
+  display: none;
+}
+
+.choose-difficulty {
+  text-align: center;
+}
+
+.game-group {
+  position: relative;
+  /* width: calc(100vmin - 50px);
+  height: calc(50vmin + 60px); */
+}
+
+.canvas-group {
+  /* display: none; */
+  z-index: -1;
+}
+
+.primary-canvas {
+  z-index: -1;
+}
+
+.game-canvas {
+  z-index: -1;
+  /* position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vmax;
+  height: 100vmax; */
+
+  width: 100vw; 
+  /* height: 100vw; */
+  /* height:width ratio = 9/16 = .5625 */
+  height: 56.25vw; 
+  /* 12/16 */
+  /* height: 75vw; */
+  max-height: 100vh;
+  /* max-width: 100vh; */
+  /* 16/9 = 1.778 */
+  max-width: 177.78vh;  
+  /* 16/12 */
+  /* max-width: 133.33vh; */ 
+  margin: auto;
+  position: absolute;
+  top:0;bottom:0; /* vertical center */
+  left:0;right:0; /* horizontal center */
+}
+/* 
+.canvas-width-max {
+  min-width: 1000px;
+  min-height: 500px;
+  width: calc(100vw - 14px);
+  height: calc(50vw - 7px);
+}
+
+.canvas-height-max {
+  min-width: 1000px;
+  min-height: 500px;
+  width: calc(200vh - 14px);
+  height: calc(100vh - 7px);
+} */
+
+.background {
+  z-index: -999;
+}
+
+.menu {
+  background-color: black;
+  z-index: 9999;
+  position: absolute;
+  left: 0;
+  top: 0;
+  /* padding-top: 50px; */
+  /* padding-top: calc((50vw - 7px) / 4); */
+  /* width: 50%; */
+  /* margin: 0 auto; */
+  width: calc(100vw);
+  height: calc(50vw);
+  /* font-size: 1.5vw; */
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  font-size: 2vw;
+}
+
+.menu .controls {
+  height: 50%;
+}
+
+.sub-menu {
+  margin: auto;
+  width: 50%;
+}
+
+.sub-menu.pause-menu {
+  justify-content: flex-end;
+}
+
+.sub-menu.retry-menu {
+  height: 90%;
+  justify-content: flex-end;
+}
+
+.credits {
+  font-size: calc(5px + 1vw);
+}
+
+.list-table {
+  width: 100%;
+  height: 300px;
+}
+
+/* .high-scores-list {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 0;
+  width: 100%;
+}
+
+.high-scores-list tr {
+  text-align: center;
+  font-size: calc(15px + 1vw);
+}
+
+.high-scores-list td {
+  text-align: center;
+  font-size: calc(10px + 1vw);
+} */
+
+.control {
+  font-family: "Trebuchet MS";
+  /* flex: 1; */
+  margin: 10px;
+  /* Button style */
+  border: 1px solid #ffffff;
+  background: #ca2fa3;
+  background: -webkit-gradient(linear, left top, left bottom, from(#cc28a3), to(#ca2fa3));
+  background: -webkit-linear-gradient(top, #cc28a3, #ca2fa3);
+  background: -moz-linear-gradient(top, #cc28a3, #ca2fa3);
+  background: -ms-linear-gradient(top, #cc28a3, #ca2fa3);
+  background: -o-linear-gradient(top, #cc28a3, #ca2fa3);
+  background-image: -ms-linear-gradient(top, #cc28a3 0%, #ca2fa3 100%);
+  padding: 13.5px 27px;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 1px;
+  -webkit-box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0;
+  -moz-box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0;
+  box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0;
+  text-shadow: #8f3232 0 1px 0;
+  color: #ffffff;
+  font-size: 1.75vw;
+  text-decoration: none;
+  vertical-align: middle;
+  }
+.control:hover {
+  border: 1px solid #ffffff;
+  text-shadow: #571e1e 0 1px 0;
+  background: #cc64b2;
+  background: -webkit-gradient(linear, left top, left bottom, from(#cc64b2), to(#c968b0));
+  background: -webkit-linear-gradient(top, #cc64b2, #c968b0);
+  background: -moz-linear-gradient(top, #cc64b2, #c968b0);
+  background: -ms-linear-gradient(top, #cc64b2, #c968b0);
+  background: -o-linear-gradient(top, #cc64b2, #c968b0);
+  background-image: -ms-linear-gradient(top, #cc64b2 0%, #c968b0 100%);
+  color: #fff;
+  }
+.control:active {
+  text-shadow: #571e1e 0 1px 0;
+  border: 1px solid #ffffff;
+  background: #cc28a3;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ca2fa3), to(#ca2fa3));
+  background: -webkit-linear-gradient(top, #ca2fa3, #cc28a3);
+  background: -moz-linear-gradient(top, #ca2fa3, #cc28a3);
+  background: -ms-linear-gradient(top, #ca2fa3, #cc28a3);
+  background: -o-linear-gradient(top, #ca2fa3, #cc28a3);
+  background-image: -ms-linear-gradient(top, #ca2fa3 0%, #cc28a3 100%);
+  color: #fff;
+  }
+
+.control[disabled] {
+  cursor: default;
+  background-image: none;
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  color: #333;
+  background-color: #E6E6E6;
+}
